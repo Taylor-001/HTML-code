@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title> Title </title>
+
+    <style>
+        :root {
+            --secondary-color: rgba(0, 128, 0, 1);
+            --inlay-color: rgba(0, 128, 0, 0.75);
+            --menu-speed: 0.75s;
+        }
+
+        .button {
+            background: #333;
+            color: #eee;
+            padding: 1em;
+            border-radius: 30px;
+            border: 0;
+            letter-spacing: 2px;
+            text-decoration: none;
+            font-size: 24px;
+            transition: 0.2s;
+        }
+
+        #section-d .button {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+        .button:hover {
+            color: #eee;
+            background: rgba(0, 128, 0, 0.85);
+            box-shadow: 0 0 10px #75b743, 0 0 40px #75b743, 0 0 80px #75b743;
+            transition-delay: .2s;
+        }
+
+        /* Modal */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: var(--inlay-color);
+            margin: 19% auto;
+            width: 70%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+                0 7px 20px 0 rgba(0, 0, 0, 0.17);
+            animation-name: modalopen;
+            animation-duration: .5s;
+        }
+
+        .modal-header h2,
+        .modal-footer h3 {
+            margin: 0;
+        }
+
+        .modal-header {
+            background: var(--secondary-color);
+            padding: 15px;
+            color: #eee;
+            border: dotted #333 2px;
+        }
+
+        .modal-body {
+            padding: 10px 20px;
+        }
+
+        .modal-bar {
+            align-content: center;
+            align-items: center;
+        }
+
+        .modal-footer {
+            background: #333;
+            padding: 10px;
+            color: #eee;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #eee;
+            float: right;
+            font-size: 30px;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .submit {
+            padding: 10px;
+            background: #000;
+            color: #eee;
+            border: none;
+
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav id="nav-bar">
+        <div class="logo"><a href=""><img src="" alt="logo"></a></div>
+        <ul>
+            <li><a href="#">Title</a></li>
+            <li><a href="#">Title</a></li>
+            <li><a href="#">Title</a></li>
+            <li><a href="#section-d">Title</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap">
+            <h1>Title </h1>
+            <p></p>
+        </div>
+    </header>
+
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="ham">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a "#"></a>Title</li>
+                        <li><a href="#">Title</a></li>
+                        <li><a href="#">Title</a></li>
+                        <li><a href="#" target="_blank">Title</a>Blogs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section a -->
+    <section id="section-a" class="grid">
+        <div class="content-wrap">
+            <h2 class="content-title">Title </h2>
+            <div class="content-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section b -->
+    <section id="section-b" class="grid">
+        <ul>
+            <li>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random?" alt="card">
+                    <div class="card-content">Title </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random?" alt="card">
+                    <div class="card-content">Title </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random?" alt="card">
+                    <div class="card-content">Title </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+                </div>
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</li>
+        </ul>
+    </section>
+
+    <!-- section c -->
+
+    <section id="section-c" class="grid">
+        <div class="box">
+            <h2 class="content-title">
+                Title 
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+        </div>
+
+        <div class="box">
+            <h2 class="content-title">
+                Title 
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!  
+            </p>
+        </div>
+    </section>
+    <!-- section d -->
+    <section id="section-d" class="grid">
+        <div class="box">
+            <button id="modal-btn" class="button"></button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="simple-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h2>Title </h2>
+            </div>
+            <div class="modal-body">
+
+                <aside id="modal-bar">
+                    <p></p>
+                    <form>
+                        <div>
+                            <label>Name :</label>
+                            <input type="text" name="name">
+                        </div>
+
+                        <div>
+                            <label>Phone :</label>
+                            <input type="tel" name="phone" placeholder="(xxx)xxx-xxxx" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
+                        </div>
+
+                        <div>
+                            <label>Email :</label>
+                            <input type="email" name="email">
+                        </div>
+
+                        <div>
+                            <label>Message :</label>
+                            <textarea placeholder="Message" name="message"> </textarea>
+                        </div>
+
+                        <button class="submit">Subscribe</button>
+                    </form>
+                </aside>
+            </div>
+            <div class="modal-footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vel adipisci fugit quod laborum doloremque delectus iste tempore optio laboriosam? Facere quo optio atque rem iure! Autem odio praesentium voluptas totam officiis excepturi minus iste sequi nihil debitis consequuntur similique voluptatum ea quaerat, laboriosam exercitationem quisquam ex consectetur a vitae harum saepe in optio. Dolorem rerum ex optio dolor. Odio unde, suscipit aut aspernatur magnam voluptatem fugit veniam consectetur non repellendus sit veritatis incidunt, ducimus natus dolor ipsa totam possimus!</p>
+            </div>
+        </div>
+    </div>
+    <script src="modal.js"></script>
+
+    <!-- Footer -->
+
+    <footer id="main-footer" class="grid">
+        <p>Project By Name</p>
+        <p> Title <span class="highlight">Title </span>, Copyright &copy; 20XX</p>
+    </footer>
+</body>
+
+</html>
