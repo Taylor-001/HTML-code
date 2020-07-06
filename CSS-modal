@@ -1,0 +1,226 @@
+:root {
+    --primary-color: rgba(0, 128, 0, 0.65);
+    --overlay-color: rgba(0, 128, 0, 0.85);
+    --inlay-color: rgba(25, 128, 25, .75);
+    --secondary-color: rgba(0, 30, 25, 0.75);
+    --menu-speed: 0.75s;
+}
+
+/* Modal */
+
+#simple-modal{
+    z-index: 1111;
+    width: 100%
+}
+
+.button {
+    background: #333;
+    color: #eee;
+    padding: 1em;
+    border-radius: 30px;
+    border: 0;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+#section-d .button {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.button:hover {
+    color: #eee;
+    background: rgba(0, 128, 0, 0.85);
+    box-shadow: 0 0 10px #75b743, 0 0 40px #75b743, 0 0 80px #75b743;
+    transition-delay: .2s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 20, 0, 0.8);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+    margin: 0;
+}
+
+.modal-header h2{
+    font-size: 20px;
+    width: 100%;
+}
+
+.modal-header {
+    background: var(--secondary-color);
+    padding: 15px;
+    color: #eee;
+    overflow: hidden;
+    width: 100%;
+}
+
+.modal-body {
+    padding: 10px 20px;
+}
+
+.modal-bar {
+    align-content: center;
+    align-items: center;
+}
+
+.modal-footer {
+    background: #333;
+    padding: 10px;
+    color: #eee;
+    text-align: center;
+    font-size: 20px;
+}
+
+.close-btn {
+    color: #eee;
+    float: right;
+    font-size: 30px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: var(--inlay-color);
+    margin: 10% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5),
+        0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: .5s;
+}
+
+.modal-body p{
+    color: #eee;
+    font-size: 30px;
+}
+
+aside #modal-bar {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+aside#modal-bar input,
+aside#modal-bar textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+aside#modal-bar textarea{
+    height: 200px;
+}
+
+aside#modal-bar div {
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+aside input {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+aside#modal-bar label {
+    color: #eee;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+aside#modal-bar h3 {
+    color: #eee;
+    font-size: 2em;
+}
+
+.submit {
+    padding: 10px;
+    background: #333;
+    color: #eee;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+/* forum */
+#forum {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    width: 60%;
+}
+
+#forum .join input,
+#forum .join textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+#forum .join textarea{
+    height: 200px;
+}
+
+#forum .join textarea {
+    align-content: center;
+    align-items: center;
+
+}
+
+#forum input {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#forum button {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid green;
+}
+
+#forum button:hover {
+    color: #000;
+    box-shadow: 0 0 10px #75b743, 0 0 40px #75b743, 0 0 80px #75b743;
+    transition-delay: .2s;
+}
+
+@media(min-width: 500px) {
+    #simple-modal h2 {}
+}
